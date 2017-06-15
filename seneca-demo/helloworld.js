@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 let seneca = require('seneca')()
 
 // 创建服务
@@ -26,12 +26,12 @@ seneca.add(pattern, action)
 // 方式1
 //
 seneca.act({role: 'math', cmd: 'sum', left: 1, right: 2}, (err, result) => {
-  if (err) return console.error(err)
+  if (err) { return console.error(err) }
   console.log(result)
 })
 
 seneca.act({module:'demo', action: 'greeting', name: 'World'}, (err, result) => {
-  if (err) return console.error(err)
+  if (err) { return console.error(err) }
   console.log(result)
 })
 
