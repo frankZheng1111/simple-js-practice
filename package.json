@@ -1,0 +1,22 @@
+{
+  "name": "simple-js-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frankZheng1111/simple-js-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frankZheng1111/simple-js-practice/issues"
+  },
+  "homepage": "https://github.com/frankZheng1111/simple-js-practice#readme",
+  "dependencies": {
+    "seneca": "^3.3.0"
+  }
+}
