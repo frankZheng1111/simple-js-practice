@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha --recursive",
+    "test": "node_modules/.bin/istanbul cover node_modules/.bin/mocha -- test --recursive",
     "start": "node server.js"
   },
   "author": "",
@@ -16,6 +16,7 @@
     "chai": "^4.0.2",
     "istanbul": "^0.4.5",
     "mocha": "^3.4.2",
-    "sinon": "^2.3.4"
+    "sinon": "^2.3.4",
+    "tcp-port-used": "^0.1.2"
   }
 }
