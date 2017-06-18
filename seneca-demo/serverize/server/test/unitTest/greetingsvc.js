@@ -3,7 +3,7 @@ let seneca = require('seneca')();
 let should = require ('chai').should();
 
 describe('when seneca use the greeting plugin', () => {
-  seneca.use('../greetingsvc.js');
+  seneca.use('../../greetingsvc.js');
   it('should has plugin "greeting"', () => {
     seneca.hasplugin('greeting').should.be.true;
   });
