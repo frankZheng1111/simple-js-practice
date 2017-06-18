@@ -9,11 +9,11 @@ describe('when seneca use the greeting plugin', () => {
   });
 
   it('should answer hellow with my name', function(){
-    let req = { module: 'demo', action: 'greeting', name:'Marlin' }
-    seneca.act( req, (error, result) => {
+    let req = { module: 'demo', action: 'greeting', name:'Marlin' };
+    seneca.act(req, (error, result) => {
       should.not.exist(error);
       should.exist(result);
-      result.answer.should.eq('hello, '+req.name);
+      result.answer.should.eq('hello, ' + req.name);
     });
   })
 })
