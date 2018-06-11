@@ -31,8 +31,12 @@ async function getLock(key, expireTime) {
 
 async function unLock(key, expiredAt) {
   // 未过期, 释放锁
-  // 这边可能有问题，判断和删除操作不是原子级的操作
   if (expiredAt > new Date()) {
+    // 这边可能有问题, 判断后删除不是一个原子级操作
+    // 高并发下可能会有误删其他锁的情况
+    // 比如说判断时未超时 执行删除操作时已超时并已被其他线程进程获得锁,这样便会误删
+    // 网上说可以用lua脚本解决该问题
+    // 这边暂时先以设置稍长的超时时间来解决此问题
     return await client.delAsync(key);
   }
 };
