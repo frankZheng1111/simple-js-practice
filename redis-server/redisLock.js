@@ -31,6 +31,7 @@ async function getLock(key, expireTime) {
 
 async function unLock(key, expiredAt) {
   // 未过期, 释放锁
+  // 这边可能有问题，判断和删除操作不是原子级的操作
   if (expiredAt > new Date()) {
     return await client.delAsync(key);
   }
